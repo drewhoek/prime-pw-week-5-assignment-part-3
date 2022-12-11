@@ -44,17 +44,16 @@ console.log( 'Records by Elvis Presley:', findByArtist( 'Elvis Presley' ) );
 
 function search( criteria ) {
     const results = [];
-    for (const item of collection) {
+    for ( const item of collection ) {
         let match = true;
-    
-        for (const key in criteria) {
-          if (item[key] !== criteria[key]) {
+        for ( const key in criteria ) {
+          if (item[ key ] !== criteria[ key ]) {
             match = false;
             break;
           }
         }
-        if (match) {
-          results.push(item);
+        if ( match ) {
+          results.push( item );
         }
       }
       return results;
