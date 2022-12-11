@@ -20,3 +20,11 @@ console.log( addToCollection( 'The Very Best of the Eagles', 'Eagles', '2003' ) 
 console.log( addToCollection( 'Trauma', 'I Prevail', '2019' ) );
 console.log( addToCollection( 'Mr. Morale and the Big Steppers', 'Kendrick Lamar', '2022' ) );
 console.log( 'My album collection is:', collection );
+
+function showCollection( array ) {
+    console.log( 'Number of records in collection:', array.length );
+    for ( let i = 0; i < array.length; i++ ) {
+        console.log( array[i].title, 'by', array[i].artist, 'published in', array[i].yearPuplished );
+    }
+}
+showCollection( collection );
