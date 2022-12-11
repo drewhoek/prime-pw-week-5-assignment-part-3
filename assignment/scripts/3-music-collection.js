@@ -60,3 +60,5 @@ function search( criteria ) {
 }
 console.log( 'Record by Kendrick Lamar in 2015 is:', search( { artist: 'Kendrick Lamar', yearPuplished: '2015' } ) );
 console.log( 'Record by I Prevail in 2019 is:', search( { artist: 'I Prevail', yearPuplished: '2019' } ) );
+
+// Ran out of time to complete last stretch goal.
