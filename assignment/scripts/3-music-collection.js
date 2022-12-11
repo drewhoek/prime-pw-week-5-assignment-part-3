@@ -28,3 +28,16 @@ function showCollection( array ) {
     }
 }
 showCollection( collection );
+
+function findByArtist( artist ) {
+    let recordsByArtist = [];
+    for ( let i = 0; i < collection.length; i++ ) {
+        if ( artist === collection[ i ].artist ) {
+            recordsByArtist.push( collection[ i ] );
+        } 
+    }
+    return recordsByArtist;
+}
+console.log( 'Records by Mac Miller:', findByArtist( 'Mac Miller' ) );
+console.log( 'Records by Kendrick Lamar:', findByArtist( 'Kendrick Lamar' ) );
+console.log( 'Records by Elvis Presley:', findByArtist( 'Elvis Presley' ) );
