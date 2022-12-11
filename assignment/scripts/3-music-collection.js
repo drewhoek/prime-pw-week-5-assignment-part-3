@@ -41,3 +41,23 @@ function findByArtist( artist ) {
 console.log( 'Records by Mac Miller:', findByArtist( 'Mac Miller' ) );
 console.log( 'Records by Kendrick Lamar:', findByArtist( 'Kendrick Lamar' ) );
 console.log( 'Records by Elvis Presley:', findByArtist( 'Elvis Presley' ) );
+
+function search( criteria ) {
+    const results = [];
+    for (const item of collection) {
+        let match = true;
+    
+        for (const key in criteria) {
+          if (item[key] !== criteria[key]) {
+            match = false;
+            break;
+          }
+        }
+        if (match) {
+          results.push(item);
+        }
+      }
+      return results;
+}
+console.log( 'Record by Kendrick Lamar in 2015 is:', search( { artist: 'Kendrick Lamar', yearPuplished: '2015' } ) );
+console.log( 'Record by I Prevail in 2019 is:', search( { artist: 'I Prevail', yearPuplished: '2019' } ) );
